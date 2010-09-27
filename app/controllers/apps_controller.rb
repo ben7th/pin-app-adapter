@@ -29,8 +29,10 @@ class AppsController < ApplicationController
       end
       return
     end
-    render_ui do |ui|
-      ui.fbox :show,:title=>"新应用",:partial=>"/apps/parts/form_app",:locals=>{:app=>app}
+    responds_to_parent do
+      render_ui do |ui|
+        ui.fbox :show,:title=>"新应用",:partial=>"/apps/parts/form_app",:locals=>{:app=>app}
+      end
     end
   end
 

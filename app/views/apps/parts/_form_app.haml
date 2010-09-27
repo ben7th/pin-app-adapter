@@ -1,4 +1,4 @@
-- mindpin_form_for app,:url=>apps_path,:html=>{:class=>'common_form',:multipart=>true,:target => 'upload_frame'} do |f|
+- mindpin_form_for app,:url=>apps_path,:html=>{:class=>'new_app_form',:multipart=>true,:target => 'upload_frame'} do |f|
   = f.text_field :name, :size=>20, :maxlength=>255
   = f.text_field :title, :size=>20, :maxlength=>255
   = f.text_field :callback_url, :size=>20, :maxlength=>255

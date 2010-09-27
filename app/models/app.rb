@@ -2,7 +2,10 @@ class App < ActiveRecord::Base
   include DispatchHttp
   has_many :installings
   has_many :users,:through=>:installings,:source=>:user
-
+  validates_presence_of :name
+  validates_presence_of :title
+  validates_presence_of :callback_url
+  validates_uniqueness_of :name
   MINDMAP_EDITOR = "mindmap_editor"
 
   if RAILS_ENV == "development"
