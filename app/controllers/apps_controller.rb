@@ -1,5 +1,5 @@
 class AppsController < ApplicationController
-
+  before_filter :login_required
   before_filter :pre_load
 
   def index
