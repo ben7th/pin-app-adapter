@@ -39,7 +39,7 @@ ActionController::Routing::Routes.draw do |map|
   # Note: These default routes make all actions in every controller accessible via GET requests. You should
   # consider removing or commenting them out if you're using named routes and resources.
   # ----------------- 应用相关 ----------
-
+  map.root :controller=>"apps"
   map.resources :installings,:collection=>{:install_mindmap=>:post}
   map.resources :apps,:collection=>{:installed=>:get}
 
