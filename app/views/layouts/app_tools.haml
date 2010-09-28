@@ -5,5 +5,5 @@
 
 !!! Strict
 %html{:xmlns=>"http://www.w3.org/1999/xhtml"}
-  =render :partial=>'layouts/parts/htmlhead'
-  =render :partial=>'layouts/parts/htmlbody'
+  =render :partial=>base_layout_path('parts/htmlhead.haml')
+  =render :partial=>base_layout_path('parts/htmlbody.haml')
